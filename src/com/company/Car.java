@@ -3,12 +3,10 @@ package com.company;
 public class Car extends Vehicle implements Costable {
 
     private int doorsCount;
-    private int cost;
 
-    public Car(int wheelCount, int doorsCount, int cost) {
+    public Car(int wheelCount, int doorsCount) {
         super(wheelCount);
         this.doorsCount = doorsCount;
-        this.cost = cost;
     }
 
     @Override
@@ -19,6 +17,6 @@ public class Car extends Vehicle implements Costable {
 
     @Override
     public int getCost() {
-        return cost;
+        return wheelCount * doorsCount * 100000;
     }
 }
